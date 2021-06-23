@@ -13,4 +13,28 @@ elif(player_1 == "rock" and player_2 == "paper"):
 
 elif(player_1 == "rock" and player_2 == "scissor"):
     print("player_1 wins")
+
+if(player_1 == "paper" and player_2 == "scissor"):
+    print("player_2 wins")
+
+elif(player_1 == "paper" and player_2 == "rock"):
+    print("player_1 wins")
+
+elif(player_1 == "paper" and player_2 == "paper"):
+    print("tie")
+
+if(player_1 == "scissor" and player_2 == "paper"):
+    print("player_1 wins")
+
+elif(player_1 == "scissor" and player_2 == "scissor"):
+    print("tie")
+
+elif(player_1 == "scissor" and player_2 == "rock"):
+    print("player_2 wins")
+
    
+
+   
+   
+
+      
