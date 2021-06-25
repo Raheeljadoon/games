@@ -18,6 +18,9 @@ num_words4 = {1:'one thousand',2:'two thousand',3:'three thousand',
                 7:'seven thousand',8:'eight thousand',9:'nine thousand'}
 
 num = int(input(" enter any number "))
+
+# below 100
+
 if num < 100:
     if num % 10 == 0:
         print(num_words1[num])
@@ -29,6 +32,9 @@ if num < 100:
         num_1 = int(num / 10)
         num_2 = num % 10
         print(num_words2[num_1],num_words1[num_2])
+
+# for 100 and above
+
 
 elif 100 <= num < 1000:
     if num % 100 == 0 :
@@ -53,15 +59,22 @@ elif 100 <= num < 1000:
             num_4_4 = num_5 % 10
             print( num_words3[num_4], num_words2[num_4_3], num_words1[num_4_4])
 
+# for 1000 and above
 
 elif num >= 1000:
     num_6_1 = num % 1000
     num_6 = int( num / 1000 )
+    num_6_2 = int(num_6_1 / 10)
+    num_6_3 = num_6_1 % 10
+
     if num % 1000 == 0:
         num_6 = int( num / 1000 )
         
         print(num_words4[num_6])
     elif (num > 3000) and (num < 3010):
+            print( num_words4[num_6],"and" , num_words1[num_6_1])
+
+    elif (num > 3010) and (num < 3020):
             print( num_words4[num_6],"and" , num_words1[num_6_1])
 
     elif num_6_1 % 100 == 0 :
@@ -71,4 +84,6 @@ elif num >= 1000:
         num_7_1= int(num_6_1 / 100)
        
         print(num_words4[num_7],num_words3[num_7_1])
-    
+    elif (num > 3019) and (num < 3100):
+            print( num_words4[num_6],"and" , num_words2[num_6_2], 
+            num_words1[num_6_3])
