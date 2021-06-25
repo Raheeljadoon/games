@@ -1,7 +1,20 @@
-single_num = {1 :'one', 2 :'two', 3:'three', 4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine',10:'ten',11:'eleven',12:'twelve',13:'thirteen',14:'fourteen',15:'fiften',16:'sixteen',17:'seventeen',18:'eighteen',19:'nineteen'}
-double_num = {20:'twenty',30:'thirty',40:'fourty',50:'fifty',60:'sixty',70:'seventy',80:'eighty',90:'ninty'}
-num = int(input("enter any number  "))
-if 0 < num < 20:
-    print(single_num[num])
-elif 19 < num < 100:
-    print(double_num[num])
+
+num_words1 = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine',
+               10: 'Ten', 11: 'Eleven', 12: 'Twelve', 13: 'Thirteen', 14: 'Fourteen', 15: 'Fifteen', 16: 'Sixteen',
+               17: 'Seventeen', 18: 'Eighteen', 19: 'Nineteen',
+               20: 'Twenty', 30: 'Thirty', 40: 'Forty', 50: 'Fifty', 60: 'Sixty', 70: 'Seventy', 80: 'Eighty',
+               90: 'Ninety', 100: 'Hundred'}
+num_words2 = {1: 'ten', 2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'Seventy',
+               8: 'Eighty', 9: 'Ninety'}
+
+num = int(input(" enter any number "))
+if num < 100:
+    if num % 10 == 0:
+        print(num_words1[num])
+    elif num < 20 :
+        print(num_words1[num])
+    
+    else :
+        num_1 = int(num / 10)
+        num_2 = num % 10
+        print(num_words2[num_1],num_words1[num_2])
