@@ -55,12 +55,17 @@ elif 100 <= num < 1000:
 
 
 elif num >= 1000:
+    num_6_1 = num % 1000
     if num % 1000 == 0:
         num_6 = int( num / 1000 )
+        
         print(num_words4[num_6])
-    else :
+
+    elif num_6_1 % 100 == 0 :
+
         num_7 = int(num / 1000)
         num_8 = num % 1000
-        num_8_1 = int(num_8 / 10)
+        num_8_1 = int(num_8 / 100)
         num_8_2 = num_8 % 10
-        print(num_words4[num_7],"and",num_words2[num_8_1],num_words1[num_8_2])
+        print(num_words4[num_7],num_words3[num_8_1])
+    
