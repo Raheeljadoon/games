@@ -56,16 +56,19 @@ elif 100 <= num < 1000:
 
 elif num >= 1000:
     num_6_1 = num % 1000
+    num_6 = int( num / 1000 )
     if num % 1000 == 0:
         num_6 = int( num / 1000 )
         
         print(num_words4[num_6])
+    elif (num > 3000) and (num < 3010):
+            print( num_words4[num_6],"and" , num_words1[num_6_1])
 
     elif num_6_1 % 100 == 0 :
 
         num_7 = int(num / 1000)
-        num_8 = num % 1000
-        num_8_1 = int(num_8 / 100)
-        num_8_2 = num_8 % 10
-        print(num_words4[num_7],num_words3[num_8_1])
+        
+        num_7_1= int(num_6_1 / 100)
+       
+        print(num_words4[num_7],num_words3[num_7_1])
     
