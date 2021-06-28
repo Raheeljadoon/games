@@ -44,6 +44,12 @@ elif 100 <= num < 1000:
     
         num_3 =  int(num / 100 )
         print(num_words3[num_3])
+    
+    elif 100 < num < 110 :
+        num_3_1 = int(num / 100)
+        num_3_2 = num % 100
+        print(num_words3[num_3_1], num_words1[num_3_2])
+     
 
     else :
         num_4 = int(num / 100)
