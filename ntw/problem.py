@@ -8,11 +8,14 @@ num_words1 = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four',
                20: 'Twenty', 30: 'Thirty', 40: 'Forty', 50: 'Fifty',
                 60: 'Sixty', 70: 'Seventy', 80: 'Eighty',
                90: 'Ninety', 100: 'Hundred'}
+
 num_words2 = {1: 'ten', 2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty',
                  6: 'sixty', 7: 'Seventy',8: 'Eighty', 9: 'Ninety'}
+
 num_words3 = {1:'one hundred',2:'two hundred',3:'three hundred',
                 4:'four hundred',5:'five hundred',6:'six hundred',
                 7:'seven hundred',8:'eight hundred',9:'nine hundred'}
+
 num_words4 = {1:'one thousand',2:'two thousand',3:'three thousand',
                 4:'four thousand',5:'five thousand',6:'six thousand',
                 7:'seven thousand',8:'eight thousand',9:'nine thousand'}
@@ -69,12 +72,12 @@ elif num >= 1000:
 
     if num % 1000 == 0:
         num_6 = int( num / 1000 )
-        
         print(num_words4[num_6])
-    elif (num > 3000) and (num < 3010):
+
+    elif (num > 1000) and (num < 1010):
             print( num_words4[num_6],"and" , num_words1[num_6_1])
 
-    elif (num > 3010) and (num < 3020):
+    elif (num > 1010) and (num < 1020):
             print( num_words4[num_6],"and" , num_words1[num_6_1])
 
     elif num_6_1 % 100 == 0 :
@@ -84,6 +87,6 @@ elif num >= 1000:
         num_7_1= int(num_6_1 / 100)
        
         print(num_words4[num_7],num_words3[num_7_1])
-    elif (num > 3019) and (num < 3100):
+    elif (num > 1019) and (num < 1100):
             print( num_words4[num_6],"and" , num_words2[num_6_2], 
             num_words1[num_6_3])
