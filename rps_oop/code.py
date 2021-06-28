@@ -15,11 +15,10 @@ class player_2():
 
 class Game():
     def compare_choice(self,player_1,player_2):
-        if player_1 == "rock" and player_2 == "paper" or player_1 == "paper" and player_2 == "scissor":
-
+        if player_1 == "rock" and player_2 == "paper" or player_1 == "paper" and player_2 == "scissor" or player_1 == "scissor" and player_2 == "rock":
             return "player_2 "
     
-        elif player_1 == "rock" and player_2 == "scissor" or player_1 == "scissor" and player_2 == "paper":
+        elif player_1 == "rock" and player_2 == "scissor" or player_1 == "scissor" and player_2 == "paper" or player_1 =="paper" and player_2 == "rock":
             return "player_1 "
             
         elif player_1 == player_2:
@@ -38,7 +37,8 @@ class Game():
             print("player_1 choose",player_1_ch ,"and player_2 choose" , player_2_ch) 
             print("player_1 wins")
 
-        elif result == "tie":
+        else:
+            result == "tie"
             print("player_1 choose",player_1_ch ,"and player_2 also choose" , player_2_ch)
             print("both choose same its tie")
             
