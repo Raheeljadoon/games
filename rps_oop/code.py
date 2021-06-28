@@ -29,16 +29,18 @@ class Game():
         player_1_ch = player_1.choose()
         player_2_ch = player_2.choose()
         result = self.compare_choice(player_1_ch,player_2_ch)
+
         if result == "player_2 ":
             print("player_1 choose",player_1_ch ,"and player_2 choose" , player_2_ch)
             print("player_2 wins")
+
         elif  result == "player_1 ":
             print("player_1 choose",player_1_ch ,"and player_2 choose" , player_2_ch) 
             print("player_1 wins")
 
         elif result == "tie":
-            
-            print("player_1 choose",player_1_ch ,"and player_2 choose" , player_2_ch)
+            print("player_1 choose",player_1_ch ,"and player_2 also choose" , player_2_ch)
             print("both choose same its tie")
+            
 game = Game()
 game.play()
