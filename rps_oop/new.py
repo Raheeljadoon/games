@@ -46,7 +46,7 @@ class Game:
             print("both choose same its tie")
 
                     
-game = Game("","") 
+Game("","") 
     
 
 
