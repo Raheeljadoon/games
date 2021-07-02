@@ -46,7 +46,7 @@ class Game:
             print("both choose same its tie")
 
                     
-Game("","") 
+Game("Player_one_choice","player_2_choice") 
     
 
 
