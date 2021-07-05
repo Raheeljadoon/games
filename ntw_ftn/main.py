@@ -22,10 +22,12 @@ class Converter:
         else:
             return list_1[num]  + suffix
 
-    def convert_To_Words(self):
 
-        num = int(input("enter number to convert :")) 
-        
+
+   
+    def __init__(self,num) :
+        self.num = num 
+       
         
         result = self.num_lists((num // 100000)% 100, "Lakh ")
 
@@ -33,19 +35,19 @@ class Converter:
 
         result += self.num_lists((num // 100 ) % 10 , "Hundred " )
 
+
         if num > 100 and num % 100:
             result += " and "
-            
-
         result += self.num_lists((num % 100), "")
 
-        return result
+        print(result)
+
+        
+s = Converter(567)
+s = Converter(10763)
+s = Converter(789654)
 
 
-    
-s = Converter()
-
-print(s.convert_To_Words())
 
 
 

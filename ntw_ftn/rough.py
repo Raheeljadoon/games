@@ -1,7 +1,7 @@
 # for lakh 
-num = int(input("enter number"))
-result = (num // 100000)%100
-print(result)
+# num = int(input("enter number"))
+# result = (num // 100000)%100
+# print(result)
 
 # num = int(input("enter number"))
 # a = num // 10 
