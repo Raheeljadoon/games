@@ -49,6 +49,11 @@ elif 100 <= num < 1000:
         num_3_1 = int(num / 100)
         num_3_2 = num % 100
         print(num_words3[num_3_1], num_words1[num_3_2])
+    
+    elif 200 < num < 210 :
+        num_3_1 = int(num / 100)
+        num_3_2 = num % 100
+        print(num_words3[num_3_1], num_words1[num_3_2])
      
 
     else :
@@ -66,7 +71,7 @@ elif 100 <= num < 1000:
         else:
             num_4_3 = int(num_5 / 10)
             num_4_4 = num_5 % 10
-            print( num_words3[num_4], num_words2[num_4_3], num_words1[num_4_4])
+            print(num_words3[num_4], num_words2[num_4_3], num_words1[num_4_4])
 
 # for 1000 and above
 
@@ -91,8 +96,8 @@ elif num >= 1000:
         num_7 = int(num / 1000)
         
         num_7_1= int(num_6_1 / 100)
-       
-        print(num_words4[num_7],num_words3[num_7_1])
+        print(num_words4[num_7] , num_words3[num_7_1])
+
     elif (num > 1019) and (num < 1100):
             print( num_words4[num_6],"and" , num_words2[num_6_2], 
             num_words1[num_6_3])
