@@ -18,14 +18,11 @@ class School:
         print(self.school_list)
 
     def update(self):
-        self.name = input(str("please enter new name :")) 
-        
-        #return self.school_list.append(self.name)   
-    
-    
+        x = input("which name do you want to replace  ")
+        y = input(("please enter new name :")) 
+        update_list = [item.replace(x,y)for item in self.school_list]
+        print("the update list is ", update_list)
 
-   
-        
 
 
 
@@ -46,9 +43,14 @@ class Teacher:
 
     def read(self):
         print(self.Teacher_Name)
+
     def update(self):
-        self.name = input(str("please enter new name :"))
- 
+        x = input("which name do you want to replace  ")
+        y = input(("please enter new name : ")) 
+        update_list = [item.replace(x,y)for item in self.Teacher_Name]
+        print("the update list is ", update_list)
+
+
 
    
 
@@ -59,8 +61,6 @@ class Students:
 
     def __init__(self,s_name,s_age):
         
-        
-
         self.s_name= s_name
         self.s_age = s_age
 
@@ -76,13 +76,18 @@ class Students:
         print(self.Student_Name)
 
     def update(self):
-        self.name = input(str("please enter new name :")) 
+        x = input("which name do you want to replace  ")
+        y = input(("please enter new name :")) 
+        update_list = [item.replace(x,y)for item in self.Student_Name]
+        print("the update list is ", update_list)
 
 
 
-
+print("\nwelcome to school managment system\n")
 print("what information do you want to see")
 choice1 = int(input("  1:school name \n  2:teacher name \n  3:students name  "))
+
+#this is school portion
 
 if choice1 == 1 :
 
@@ -113,16 +118,12 @@ if choice1 == 1 :
         print("new list is ,", school.school_list)
 
 
-
-
-
-        
-
+# this is teacher portion
 
 
 
 elif choice1 == 2 :
-    teacher = Teacher
+    teacher = Teacher("","")
     print("Names of teacher are ", teacher.Teacher_Name)
 
     choice3 = int(input("what you want to do \n  1:update \n  2:delete \n  3:read \n  4:create   "))
@@ -134,7 +135,7 @@ elif choice1 == 2 :
     elif choice3 == 2:
         n = input(("which name you wanted to delete  "))
         teacher.delete(n)
-        print("new list is ,", teacher.school_list)
+        print("new list is ,", teacher.Teacher_Name)
 
 
     elif choice3 == 3:
@@ -147,6 +148,8 @@ elif choice1 == 2 :
 
 
 else:
+
+# this is student portion
 
 
     student = Students("sd",23)
@@ -162,7 +165,7 @@ else:
     elif choice4 == 2:
         n = input(("which name you wanted to delete  "))
         student.delete(n)
-        print("new list is ,", student.school_list)
+        print("new list is ,", student.Student_Name)
 
 
     elif choice4 == 3:
